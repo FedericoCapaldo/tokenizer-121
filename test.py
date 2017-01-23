@@ -1,7 +1,6 @@
 import re
-import time
+import operator
 
-# start_time = time.time()
 
 def tokeinze(my_path):
     print("--- tokenizing... ---")
@@ -23,9 +22,9 @@ def tokeinze(my_path):
     return res.split()
 
 
-# print("---- %s seconds " % (time.time() - start_time))
-
 def computeWordFrequencies(list):
+    print("--- counting frequency ... ---")
+
     counted = dict()
 
     for word in list:
@@ -36,6 +35,11 @@ def computeWordFrequencies(list):
 
     return counted
 
+def printFrequencies(frequencies):
+    print("--- frequency ordering ... ---")
+    sortedByFreq = sorted(frequencies.items(), key=operator.itemgetter(1))
 
+    for index in reversed(range(0, len(sortedByFreq))):
+        print(sortedByFreq[index])
 
-print(computeWordFrequencies(tokeinze("file1.txt")))
+printFrequencies(computeWordFrequencies(tokeinze("file5.txt")))
