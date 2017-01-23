@@ -26,32 +26,15 @@ def tokeinze(my_path):
 # print("---- %s seconds " % (time.time() - start_time))
 
 def computeWordFrequencies(list):
-    print("--- counting frequecy... ---")
-    list.sort()
     counted = dict()
 
-    tempCounter = 1
-    previousWord = ""
-
     for word in list:
-        if word == previousWord:
-            tempCounter += 1
+        if word in counted:
+            counted[word] += 1
         else:
-            counted[word] = tempCounter
-            tempCounter = 1
-
-        previousWord = word
+            counted[word] = 1
 
     return counted
-
-
-
-# def computeWordFrequencies2(list):
-#     counted = dict()
-#
-#     for word in list:
-#         if counted.keys().contains()
-
 
 
 
