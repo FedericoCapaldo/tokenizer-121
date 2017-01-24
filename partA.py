@@ -24,7 +24,6 @@ def tokeinze(my_path):
 
 def computeWordFrequencies(list):
     print("--- counting frequency ... ---")
-
     counted = dict()
 
     for word in list:
@@ -39,7 +38,9 @@ def printFrequencies(frequencies):
     print("--- frequency ordering ... ---")
     sortedByFreq = sorted(frequencies.items(), key=operator.itemgetter(1))
 
-    for index in reversed(range(0, len(sortedByFreq))):
+    listLength = len(sortedByFreq)
+
+    for index in reversed(range(listLength-100, listLength)):
         print(sortedByFreq[index])
 
-printFrequencies(computeWordFrequencies(tokeinze("file5.txt")))
+printFrequencies(computeWordFrequencies(tokeinze("file6.txt")))
