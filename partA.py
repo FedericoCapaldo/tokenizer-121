@@ -54,4 +54,4 @@ def printFrequencies(frequencyList):
     for index in reversed(range(max(listLength-100,0), listLength)):
         print(sortedByFreq[index])
 
-printFrequencies(computeWordFrequencies(tokeinze("path", "file1.txt")))
+# printFrequencies(computeWordFrequencies(tokeinze("path", "file1.txt")))
