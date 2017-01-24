@@ -1,7 +1,7 @@
 import re
 import operator
 
-def openfile(path):
+def openfile(my_path):
     content = ""
     with open(my_path) as infile:
         for line in infile:
@@ -44,13 +44,14 @@ def computeWordFrequencies(list):
     return counted
 
 
-def printFrequencies(frequencies):
+def sortFrequencies(frequencyList):
+    return sorted(frequencyList.items(), key=operator.itemgetter(1))
+
+def printFrequencies(frequencyList):
     print("--- frequency ordering ... ---")
-    sortedByFreq = sorted(frequencies.items(), key=operator.itemgetter(1))
-
+    sortedByFreq = sortFrequencies(frequencyList)
     listLength = len(sortedByFreq)
-
     for index in reversed(range(max(listLength-100,0), listLength)):
         print(sortedByFreq[index])
 
-# printFrequencies(computeWordFrequencies(tokeinze("path", "file1.txt")))
+printFrequencies(computeWordFrequencies(tokeinze("path", "file1.txt")))
