@@ -23,6 +23,8 @@ def tokeinze(type, file):
     res = ""
     while counter < s:
         m = r.match(content, counter)
+        if len(m.group("na")) is not 0:
+            res += " "
         res += m.group("a")
         counter += len(m.group("a")) + len(m.group("na"))
 
