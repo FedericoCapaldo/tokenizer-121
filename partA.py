@@ -8,7 +8,7 @@ def openfile(my_path):
             content += line
     return content
 
-def tokeinze(type, file):
+def tokeinze(type, file): # running time: O(k + n) k=number of lines in the file n = number of words
     print("--- tokenizing... ---")
     content = ""
     if type == "path":
@@ -31,7 +31,7 @@ def tokeinze(type, file):
     return res.split()
 
 
-def computeWordFrequencies(list):
+def computeWordFrequencies(list): # running time: O(n * n) n = length of list
     print("--- counting frequency ... ---")
     counted = dict()
 
@@ -47,7 +47,7 @@ def computeWordFrequencies(list):
 def sortFrequencies(frequencyList):
     return sorted(frequencyList.items(), key=operator.itemgetter(1))
 
-def printFrequencies(frequencyList):
+def printFrequencies(frequencyList): # running time: O(n log n)
     print("--- frequency ordering ... ---")
     sortedByFreq = sortFrequencies(frequencyList)
     listLength = len(sortedByFreq)
