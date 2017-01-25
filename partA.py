@@ -13,7 +13,7 @@ def tokeinze(type, file):
     content = ""
     if type == "path":
         content = openfile(file)
-    elif type == "file":
+    elif type == "data":
         content = file
     content = content.lower()
 
@@ -54,4 +54,5 @@ def printFrequencies(frequencyList):
     for index in reversed(range(max(listLength-100,0), listLength)):
         print(sortedByFreq[index])
 
+# TEST (requires a file1.txt in utf-8 encoding in the same folder)
 # printFrequencies(computeWordFrequencies(tokeinze("path", "file1.txt")))
