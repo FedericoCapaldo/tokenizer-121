@@ -13,9 +13,12 @@ def findCommonWords(type, input1, input2): # runnint time O(n * n)
     print(listOfCommonWords)
     print(len(listOfCommonWords))
 
-# TEST (expected match 6)
-# input1 = "We reviewed the trip and credited the cancellation fee. The driver has been notified"
-# input2 = "If a trip is cancelled more than 5 minutes after the driver-partner has confirmed the request, a cancellation fee will apply"
-# findCommonWords("data", input1, input2)
-# OR (expected match 30440)
-# findCommonWords("path", "file1.txt", "file1.txt")
+# TEST
+def testPartB(input1, input2):
+    # (expected match 6)
+    findCommonWords("data", input1, input2)
+    # OR (expected match 30440)
+    # findCommonWords("path", "file1.txt", "file1.txt")
+input1 = "We reviewed the trip and credited the cancellation fee. The driver has been notified"
+input2 = "If a trip is cancelled more than 5 minutes after the driver-partner has confirmed the request, a cancellation fee will apply"
+# testPartB(input1, input2)
