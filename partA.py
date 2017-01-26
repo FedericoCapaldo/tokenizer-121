@@ -66,4 +66,4 @@ def print_frequencies_to_file(frequencyList):
 def test_part_A(type, filename):
     print_frequencies_to_file(compute_word_frequencies(tokeinze(type, filename)))
     print("--- finished program ---")
-test_part_A("path", "file3.txt")
+# test_part_A("path", "file3.txt")
